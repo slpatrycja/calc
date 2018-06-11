@@ -1,0 +1,29 @@
+button {
+    width: 39.5px;
+    height: 20px;
+}
+
+#input {
+    border-radius:5px;
+    border-style: inset lightgrey;
+    background: linear-gradient(to right, white, lightgrey);
+}
+.container{
+    border:solid grey 0.7px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 170px;
+    background: url(https://previews.123rf.com/images/terriana/terriana1509/terriana150900148/46073544-floral-seamless-pattern-flower-background-floral-tile-spring-texture-with-flowers-.jpg);
+    background-size: 100%;
+    box-shadow: 3px 3px lightgrey;
+
+}
+
+#blank{
+    margin:0;
+    border-width: 0;
+    padding:0;
+    background: linear-gradient(to left, rgb(238, 215, 218), white);
+    border:solid grey;
+    border-width:0.5;
+}

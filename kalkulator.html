@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="style.css" />
+      
+        <script>
+        
+         
+         function clearScreen(){
+            document.calc.result.value = "";
+         }
+         
+         function myFunction(id){
+             document.calc.result.value += id;
+         }
+
+         function Licz(){
+             var wynik = eval(document.calc.result.value);
+             document.calc.result.value = wynik;
+         }
+
+         function procent(){
+          document.calc.result.value = eval(document.calc.result.value*0.01);
+         }
+
+         function pierwiastek(){
+          document.calc.result.value = Math.sqrt(document.calc.result.value)
+         }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <div class="row" id="result">
+                <form name="calc">
+                  <input id="input" type="text"  name="result" readonly>
+                </form>
+            </div>
+        <div class="row">
+               <button id="√" type="button" onclick="pierwiastek()">√</button>
+                <button id="%" type="button"onclick="procent()">%</button>
+                <button id="clear" type="button" onclick="clearScreen()">AC</button> 
+                <button id="/" type="button" onclick="myFunction(this.id)">÷</button>
+              </div>
+
+              <div class="row">
+                <button id="7" type="button" onclick="myFunction(this.id)">7</button>
+                <button id="8" type="button" onclick="myFunction(this.id)">8</button>
+                <button id="9" type="button" onclick="myFunction(this.id)">9</button>
+                <button id="*" type="button" onclick="myFunction(this.id)">x</button>
+              </div>
+              <div class="row">
+                <button id="4" type="button" onclick="myFunction(this.id)">4</button>
+                <button id="5" type="button" onclick="myFunction(this.id)">5</button>
+                <button id="6" type="button" onclick="myFunction(this.id)">6</button>
+                <button id="-" type="button" onclick="myFunction(this.id)">-</button>
+              </div>
+              <div class="row">
+                <button id="1" type="button" onclick="myFunction(this.id)">1</button>
+                <button id="2" type="button" onclick="myFunction(this.id)">2</button>
+                <button id="3" type="button" onclick="myFunction(this.id)">3</button>
+                <button id="+" type="button" onclick="myFunction(this.id)">+</button>
+              </div>
+              <div class="row">
+                <button id="blank" type="button" >&nbsp;</button>
+                <button id="0" type="button" onclick="myFunction(this.id)">0</button>
+                <button id="." type="button"  onclick="myFunction(this.id)">.</button>
+                <button id="equals" type="button" onclick="Licz()">=</button>
+           
+              </div>
+            </div>
+          </div>
+        </div>   
+    </body>
+</html>
